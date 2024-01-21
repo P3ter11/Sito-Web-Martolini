@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+body{
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+header ul .azienda{
+    border-bottom: 2px solid #ff000d;
+}
+
+header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    background: #333030;
+    color: #ffffff;
+    width: 100%;
+    height: 15vh;
+    border-bottom: 2px solid #ffffff;
+    z-index: 5;
+    transition: 0.1s ease;
+}
+
+header ul li{
+    color: #ffffff;
+}
+
+.background-header{
+    border-bottom: 2px solid #ffffff;
+}
+
+#logo{
+    width: 25%;
+    height: auto;
+    margin: 5%;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    margin: 5%;
+}
+
+header ul li{
+    padding: 15px;
+    font-size: 1.3rem;
+    position: relative;
+    border: 1px solid transparent;
+    transition: 0.5s ease;
+}
+
+
+header ul li:hover{
+    border-color: #ffffff;
+}
+
+header ul li a{
+    color: #ffffff;
+}
+
+
+
+
+/*PAGINA PRODOTTI*/
+
+.prodotti-nav{
+    border-bottom: 2px solid #ff000d;
+}
+
+#evidenza{
+    margin-top: 25vh;
+    width: 100%;
+    height: 80vh;
+}
+
+#evidenza .container_background{
+    position: relative;
+    width: 70%;
+    height: 70%;
+    background-image: url('../Immagini/muro.jpg');
+    background-size: contain;
+    margin: 15% 30%;
+}
+
+#evidenza .container_splittato{
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 35%;
+    height: 120%;
+    display: flex;
+    flex-direction: column;
+}
+
+#evidenza h2{
+    text-transform: uppercase;
+}
+
+.container_splittato h2{
+    border-bottom: 1px solid black;
+}
+
+.container_splittato .spl_img{
+    background-image: url('../Immagini/splittato_bif.png');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+}
+
+#evidenza .container_img{
+    position: absolute;
+    top: -10%;
+    left: 30%;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container_img div{
+    margin-right: 7%;
+}
+
+.container_img .img-1{
+    background-image: url("../Immagini/SPL\ 4.JPG");
+    background-size: cover;
+    background-position: center;
+    width: 30%;
+    height: 40vh;
+}
+
+.container_img .img-2{
+    background-image: url("../Immagini/Splittato.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 35vh;
+}
+
+.container_img .img-3{
+    background-image: url("../Immagini/bifaccia.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 30vh;
+    margin-top: 2%;
+}
+
+.container_img h2{
+    color: #fff;
+    font-size: 2rem;
+}
+
+#products{
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #333030;
+    color:#fff;
+    margin-top: 25vh;
+    padding: 2% 0 0 2%;
+}
+
+#products .title{
+    position: absolute;
+    top: -5%;
+    left: 5%;
+    width: auto;
+    height: auto;
+    background-color: #8C131A;
+    color: #fff;
+    padding: 1% 2%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#products .images{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 30%;
+    height: 80vh;
+    top: -15%;
+    right: 10%;
+}
+
+#products .costruzione img:nth-child(1){
+    width: 100%;
+    height: 45%;
+    margin-bottom: 3%;
+}
+
+#products .images img:nth-child(2){
+    width: 80%;
+    height: 45%;
+    margin-bottom: 3%;
+    margin: 0 auto;
+}
+
+#products .recinzione img:nth-child(1){
+    width: 50%;
+    height: 45%;
+}
+#products .prodotti{
+    position: relative;
+    width: 55%;
+    height: auto;
+    margin: 4% 0 0 3%;
+    font-size: 1.2rem;
+    border: 1px solid #FF0009;
+}
+
+#products .prodotti li{
+    padding-bottom: 1%;
+}
+
+#products .prodotti li a{
+    color: #fff;
+}
+
+#products .prodotti li a:hover{
+    color:#a5a5a5;
+}
+
+/*PAGINA CONTATTI*/
+
+.contatti-nav{
+    border-bottom: 2px solid #ff000d;
+}
+
+
+#text-info{
+    margin-top: 15vh;
+    padding: 3%;
+}
+
+#main-info{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+#informazioni{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;   
+    display: flex;
+    flex-direction: column;
+}
+
+#maps-info{
+    width: 50%;
+    height: auto;
+}
+
+#informazioni div{
+    margin: 4% 0;
+    display: flex;
+    align-items: center;
+    
+}
+#informazioni div img{
+    width: 8%;
+    margin-right: 5%;
+    height: auto
+}
+
+#informazioni div p{
+    font-size: 1.2rem;
+}
+
+
+
+/*FOOTER*/
+
+footer{
+    background-color: #333030;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer div{
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    width: auto;
+    margin-right: 5%;
+    height: 100%;
+}
+
+footer div img{
+    width: 80%;
+    height: auto;
+    margin: 15px 0;
+}
+
+footer div ul{
+    list-style: none;
+}
+
+footer div ul li a{
+    color: #ffffff;
+}
+
+footer div ul li a:hover{
+    color:#a5a5a5;
+}
+
+@keyframes slideLeft {
+    0%{
+        transform: translateX(0);
+    }
+    
+    100%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    
+}

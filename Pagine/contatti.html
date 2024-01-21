@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contatti</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="../Immagini/LOGO MARTOLINI 2023.svg" alt="logo Martolini">
+        </div>
+
+        <div id="logo-mobile">
+            <img src="../Immagini/Logo Martolini mobile.svg" alt="logo Martolini">
+        </div>
+
+        <ul>
+            <a href="index.html"><li class="home">HOME</li></a>
+            <a href="azienda.html"><li>AZIENDA</li></a>
+            <a href="prodotti.html"><li>PRODOTTI</li></a>
+            <a href="#"><li class="contatti_nav">CONTATTI
+                <img src="../Immagini/Tel-contatti.svg" alt="logo telefono"></li></a>
+        </ul>
+
+        <div id="hamburger-menu" onclick="clicked()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-mobile">
+            <div id="logo-bianco">
+                <img src="../Immagini/Logo Martolini Bianco.svg" alt="logo Martolini">
+            </div>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="azienda.html">Azienda</a></li>
+                <li><a href="prodotti.html">Prodotti</a></li>
+                <li><a href="index.html#speidizioni_consegne">Spedizioni e consegne</a></li>
+                <li><a href="azienda.html#impianto">Impianto di produzione</a></li>
+                <li><a href="#text-info" onclick="clicked()">Contatti</a></li>
+                <li><a href="fotogallery.html">Fotogallery</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <p id="text-info">Per maggiori dettagli e/o preventivi sulla produzione e vendita di manufatti in cemento potete contattarci
+        al numero 02.9470534. Un nostro incaricato sarà a completa disposizione per fornirvi ulteriori informazioni
+        a riguardo.
+    </p>
+
+    <section id = "icons">
+        <a href="#"><div class="container">
+            <img src="../Immagini/logo-telefono-contatti.svg" alt="logo telefono">
+            <p>Telefono: +39 029470534</p>
+        </div></a>
+
+        <a href=""><div class="container">
+            <img src="../Immagini/logo-ditta-contatti.svg" alt="logo ditta">
+            <p>Sede Operativa: Via Piave 15 - 20087,<br>
+                Robecco sul Naviglio (MI)<br>
+               
+               Sede Legale: Via F. Villani, 2 - 29600, Lodi (LO)</p>
+        </div></a>
+
+        <a href="#"><div class="container">
+            <img src="../Immagini/logo-mail-contatti.svg" alt="logo mail">
+            <p>Mail: info@martolinisrl.com</p>
+        </div></a>
+    </section>
+
+    <main id="main-info">
+        <h2>Contattaci per informazioni</h2>
+        <form id ="form_contacts" onsubmit="submitForm()" method="post">
+            <label for="nome">Nome / Azienda:<br>
+                <input type="text" id="nome" required>
+            </label>
+
+            <label for="citta">Città:<br>
+                <input type="text" id="citta" required>
+            </label>
+
+            <label for="indirizzo">Indirizzo:<br>
+                <input type="text" id="indirizzo">
+            </label>
+
+            <label for="provincia">Provincia:<br>
+                <input type="text" id="provincia" required>
+            </label>
+
+            <label for="telefono">Telefono:<br>
+                <input type="text" id="telefono" pattern="[0-9]{10}" required>
+            </label>
+
+            <label for="email">E-mail:<br>
+                <input type="email" name="email" id="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" required>
+            </label>
+
+            <label for="oggetto">Oggetto:<br>
+                <input type="text" id="oggetto" required>
+            </label>
+
+            <label for="richiesta">Richiesta:<br>
+                <textarea name="textarea" id="textarea" required></textarea>
+            </label>
+
+            <input type="submit" value="Invia">
+
+        </form>
+    </main>
+
+    <section id="accesso_prodotti">
+        <p><a href="prodotti.html#buttons_prodotti">Clicca qui</a> per scoprire di più sul nostro catalogo prodotti</p>
+        <img src="../Immagini/cataloghi.png">
+    </section>
+
+
+    <footer>
+        <div>
+            
+            <ul>
+                <h4>Informazioni aziendali:</h4>
+                <li><a href="index.html">F.lli Martolini - Prefabbricati in cemento</a></li>
+                <li><a href="azienda.html#cantiere">Il nostro cantiere</a></li>
+                <li><a href="prodotti.html#buttons_prodotti">Prodotti</a></li>
+                <li><a href="index.html#spedizioni_consegne">Spedizioni e consegne</a></li>
+                <li><a href="azienda.html#impianto">Impianto di produzione</a></li>
+                <li><a href="#">Fotogallery</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <img src="../Immagini/LOGO MARTOLINI 2023 (SITO).svg" alt="Logo Martolini SRL">
+        </div>
+        
+        <div>
+            <ul>
+                <h4>Sede operativa:</h4>
+                <li>Via Piave 15 - 20087 Robecco sul Naviglio</li>
+                <li>Tel. +39 029470534</li>
+            </ul>
+            
+        </div>
+
+        <div>
+            <ul>
+                <h4>Sede legale:</h4>
+                <li>Via F.Villani, 2 - 29600 Lodi (LO)</li>
+                <li>Cap. Soc: €60.000,00</li>
+                <li>P.IVA e C.F: 11963190159</li>
+                <li>R.E.A. 82484</li>
+                <li>ISCR. REG. IMPR. 1443075</li>
+            </ul>
+        </div>
+    </footer>
+
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

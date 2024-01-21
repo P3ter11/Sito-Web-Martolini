@@ -1,0 +1,1116 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    
+}
+body{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body,section,main{
+    background-color: #ffffff;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    align-items: center;
+    /*background-color: #333030;*/
+    color: rgb(10, 10, 10);
+    width: 100%;
+    height: 10vh;
+    /*border-bottom: 2px solid #ffffff;*/
+    z-index: 5;
+    transition: 0.1s ease;
+    background: #ffffff;
+    border-bottom: 2px solid #CF1622;
+}
+
+#logo{
+    width: 20%;
+    height: auto;
+    margin: 0 5%;
+    display: flex;
+}
+
+#logo-scritta, #logo-mobile, #hamburger-menu, #nav-mobile{
+    display: none;
+}
+
+#logo img{
+    width: 90%;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    margin: 0 5%;
+}
+
+header ul li{
+    padding: 5px;
+    font-size: 1.2rem;
+    position: relative;
+    border: 1px solid transparent;
+    margin: 0 0 0 15px;
+    color: rgb(10, 10, 10);
+    transition: 0.2s;
+}
+
+
+header ul li:hover:not(.contatti_nav){
+    color: #8C131A;
+}
+
+header .contatti_nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #CF1622;
+}
+
+header .contatti_nav{
+    color: white;
+}
+
+header .contatti_nav:hover{
+    background-color: #8C131A;
+}
+
+.contatti_nav img{
+    padding-left: 10px;
+    width: 25%;
+}
+
+header ul .this_page{
+    border-bottom: 2px solid #333030;
+}
+
+#background{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 15vh;
+}
+
+#logo-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #fff;
+}
+
+#logo-section div{
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+
+#logo-section div #paragrafo{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#paragrafo h3{
+    font-size: 1.8rem;
+    margin-bottom: 1%;
+}
+
+#paragrafo p{
+    font-size: 1.4rem;
+}
+
+#logo-section div img{
+    width: 15%;
+    height: auto;
+    padding: 2%;
+}
+
+.scopri{
+    width: 25%;
+    font-size: 2rem;
+    height: auto;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #CF1622;
+    min-width: 200px;
+    transition: 0.2s;
+}
+
+.scopri:hover{
+    background-color: #8C131A;
+}
+
+#ce{
+    position: relative;
+    margin-top: 5vh;
+    background-color: #333030;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5vh;
+}
+
+#ce::before{
+    position: absolute;
+    content: "";
+    background-image: url("../Immagini/ce.png");
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 100px;
+    right: 20%;
+    top: 20%;
+}
+
+#ce h3{
+    font-size: 2.2rem;
+    margin: 30px 0 10px 0;
+    color: #ffffff;
+    margin-left: 5%;
+}
+
+#ce p{
+    font-size: 1.1rem;
+    color: #ffffff;
+    width: 50%;
+    margin: 40px 0;
+    margin-left: 5%;
+}
+
+#impianto, #cantiere, #spedizioni_consegne {
+    scroll-margin-top: 75px;
+}
+
+#background, #text-info, #history, #evidenza {
+    scroll-margin-top: 15vh;
+}
+
+#spedizioni_consegne{
+    position: relative;
+    margin-top: 5vh;
+    width: 100%;
+    height: auto;
+    background: rgb(50,48,48);
+    background: linear-gradient(90deg, rgba(50,48,48,1) 0%, rgba(207,22,34,1) 100%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 0;
+    
+}
+
+#spedizioni_consegne::after{
+    content: "";
+    position: absolute;
+    background-image: url("../Immagini/camion1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35%;
+    height: 95%;
+    bottom: 0;
+    right: 0;
+}
+
+#spedizioni_consegne h3{
+    font-size: 2.2rem;
+    margin: 40px 0 10px 0;
+    margin-left: 5%;
+}
+
+#spedizioni_consegne p{
+    font-size: 1.1rem;
+    width: 50%;
+    margin: 50px;
+    margin-left: 5%;
+}
+
+#accesso_prodotti{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10vh 0;
+}
+
+#accesso_prodotti img{
+    width: 35%;
+    height: auto;
+}
+
+#accesso_prodotti p{
+    color: black;
+    font-size: 1.2rem;
+}
+
+#accesso_prodotti p a{
+    color: #CF1622;
+}
+
+
+
+
+/*PAGINA AZIENDA*/
+
+#history{
+    background-color: #333030;
+    color: #fff;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2vh;
+}
+
+#history div{
+    width: 27%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    font-size: 1.1rem;
+    margin: 30px 0;
+}
+
+.description{
+    text-align: center;
+}
+ #history .description span{
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #CF1622;
+ }
+
+.first:before{
+    content:"1957";
+    font-family: 'Skranji', cursive;
+    font-size: 6rem;
+    position: absolute;
+    bottom: 10vh;
+    left: 50%; 
+    transform: translateX(-50%); 
+    opacity: 0.5;
+    color: #CF1622;
+}
+
+.second::before{
+    content:"";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 50%;
+    left: -3vw;
+    opacity: 0.5;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+}
+
+.second::after{
+    content:"";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top: 50%;
+    right: -3vw;
+    opacity: 0.5;
+    transform: translate(50%, -50%);
+    background-color: #fff;
+}
+
+
+#produzione{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#produzione ul, #produzione p{
+    font-size: 1.4rem;
+    margin: 5vh 0;
+    list-style-type: square;
+}
+
+#produzione p a{
+    color: #8C131A;
+}
+#produzione p a:hover{
+    color: #333030;
+}
+
+#cantiere{
+    width: 100%;
+    height: auto;
+    background: rgb(50,48,48);
+    background: linear-gradient(90deg, rgba(50,48,48,1) 0%, rgba(207,22,34,1) 100%);
+    color: #fff;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    padding: 5%;
+}
+
+#cantiere h3{
+    font-size: 2.2rem;
+    margin: 30px auto
+}
+
+#cantiere p{
+    font-size: 1.2rem;
+    margin: 30px auto
+}
+
+#impianto{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    padding: 5% 0;
+}
+
+#impianto h3{
+    font-size: 2.2rem;
+}
+
+#impianto p{
+    font-size: 1.3rem;
+    margin-top: 5vh;
+}
+
+#impianto .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5% 0;
+}
+
+#impianto .container div{
+    width: 30%;
+    height: 40vh;
+    background-size: cover;
+}
+
+#impianto .container div:nth-child(1){
+    background-image: url("../Immagini/macchinario.jpg");
+    background-position: center;
+}
+
+#impianto .container div:nth-child(2){
+    background-image: url("../Immagini/silos.jpg");
+}
+
+#impianto .container div:nth-child(3){
+    background-image: url("../Immagini/Immagine\ 008.jpg");
+    background-position: right;
+}
+
+#fotogallery a{
+    color: #CF1622;
+} 
+
+
+/* PAGINA PRODOTTI */
+#evidenza{
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 15vh;
+}
+
+#evidenza::before{
+    content: "In Evidenza!";
+    letter-spacing: 1px;
+    position: absolute;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #8C131A;
+    top: -15px;
+    right: -20px;
+    
+}
+
+#evidenza div{
+    width: 32%;
+}
+
+#evidenza .description{
+    height: 100%;
+    background-color: #333030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    padding: 20px;
+}
+
+#evidenza .description p{
+    margin: 5vh 0;
+    padding: 20px;
+    line-height: 30px;
+}
+
+#evidenza .description button{
+    border: 1px solid #fff;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+    padding: 10px;
+    cursor: pointer;
+    background-color:#8C131A;
+    transition: 0.2s;
+}
+
+#evidenza .description button:hover{
+    background-color: #fff;
+    color:#8C131A;
+}
+
+#evidenza .images{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4%;
+}
+
+#evidenza .images div:nth-child(1){
+    width: 100%;
+    height: 48%;
+    background-image:url("../Immagini/splittato_bif.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#evidenza .images div:nth-child(2){
+    width: 100%;
+    height: 48%;
+    background-image:url("../Immagini/Splittato.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+#evidenza div:nth-child(3){
+    height: 100%;
+    background-image:url("../Immagini/bifaccia.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+#buttons_prodotti{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 10vh 0;
+}
+
+#buttons_prodotti .btn{
+   border: 1px solid #CF1622;
+   color: #CF1622;
+   background: none;
+   width: 15%;
+   height: auto;
+   font-size: 1.2rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 10px 0;
+   transition: 0.2s;
+}
+
+#buttons_prodotti .cover{
+    background-color: #CF1622;
+    color: #fff;
+}
+
+#buttons_prodotti .btn:hover{
+    cursor: pointer;
+    background-color: #CF1622;
+    color: #fff;
+}
+
+#section-prodotti{
+    position: relative;
+    margin: 0 auto;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    width: 95%;
+    /* height: auto; */
+    padding: 20px;
+    border: 1px solid #CF1622;
+}
+
+#section-prodotti img{
+    width: 40%;
+    height: auto;
+    transition: 0.2s;
+}
+
+
+.info_prodotti{
+    width: 50%;
+    height: auto;
+    font-size: 1.1rem;
+    transition: 0.2s;
+}
+
+.info_prodotti h2{
+    margin-bottom: 20px;
+}
+
+.info_prodotti p{
+    line-height: 27px;
+}
+
+#section-prodotti a .download_pdf{
+    content: "Scarica il PDF";
+    position: absolute;
+    bottom: 2%;
+    right: 2%;
+    background-color: #fff;
+    border: 1px solid #CF1622;
+    padding: 10px;
+    transition: 0.2s;
+    color: #CF1622;
+}
+
+#section_prodotti a{
+    text-decoration: none;
+}
+
+#section-prodotti a .download_pdf:hover{
+    cursor: pointer;
+    background-color: #CF1622;
+    color: #fff;
+}
+
+
+
+
+
+/* PAGINA CONTATTI */
+#text-info{
+    margin: 20vh auto 10vh auto;
+    text-align: center;
+    max-width: 80%;
+    font-size: 1.3rem;
+}
+
+#icons{
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#icons .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 40px;
+    text-align: center;
+    color:black;
+}
+
+#main-info{
+    width: 100%;
+    height: auto;
+    color: #fff;
+    background-color: #333030;
+    margin: 10vh 0;
+    padding: 40px 0;
+}
+
+#main-info h2{
+    text-align: center;
+}
+
+form{
+    margin: 20px auto;
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+label{
+    margin: 20px 0;
+    font-size: 1.3rem;
+}
+
+input{
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: 15vw;
+    padding: 5px 0;
+    color: #fff;
+    margin: 5px 0;
+    font-family: 'Noto Sans', sans-serif;
+    
+}
+
+input[type = 'submit']{
+    background-color: #fff;
+    color:#333030;
+    font-size: 1.4rem;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+label textarea{
+    width: 40vw;
+    height: 20vh;
+    border: 2px solid #fff;
+    background-color: transparent;
+    margin: 5px 0;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+
+
+/* FOOTER */
+footer{
+    background-color: #333030;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+    padding: 20px;
+}
+
+footer div{
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    margin: 0 50px;
+    line-height: 25px;
+}
+
+
+
+footer div img{
+    width: 80%;
+    height: auto;
+    margin: 15px 0;
+}
+
+footer div ul{
+    list-style: none;
+}
+
+footer div ul li a{
+    color: #ffffff;
+}
+
+footer div ul li a:hover{
+    color:#a5a5a5;
+}
+
+@media only screen and (max-width: 1024px) {
+    /* HOME */
+    header{
+        padding: 0 7%;
+    }
+
+    header ul{
+        display: none;
+    }  
+
+    #logo{
+        width: 40%;
+        margin: 0;
+    }
+
+    #logo-bianco{
+        position: absolute;
+        top: 3vh;
+        left: 5%;
+        align-items: center;
+        width: 50px;
+        margin: 0;
+        z-index: 6;
+        transition: 0.2s ease;
+    }
+
+    #hamburger-menu{
+        display: block;
+        margin-top: 10px;
+        z-index: 6;
+    }
+
+    #hamburger-menu span{
+        display: block;
+        margin-bottom: 10px;
+        width: 40px;
+        height: 4px;
+        background-color: #8C131A;
+        transition: 0.2s ease;
+    }
+
+    .active-hamburger span{
+        transform-origin: center;
+        transform: rotate(-25deg);
+        background-color: #fff !important;
+    }
+
+    #nav-mobile{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        opacity: 0;
+        background: rgb(167, 168, 171);
+        background: linear-gradient(0deg, rgb(167, 168, 171) 0%, rgba(47,44,44,1) 100%);
+        transform: translateX(100%);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    #nav-mobile.show{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    #nav-mobile ul{
+        display: flex;
+        margin-top: 10vh;
+        justify-content: center;
+        flex-direction: column;
+    }
+    #nav-mobile ul li{
+        margin: 10px 0;
+    }
+
+    #nav-mobile ul li .active{
+        
+        border-bottom: 2px solid #fff;
+    }
+
+    #nav-mobile ul li a{
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    #background{
+        width: 100%;
+        margin-top: 10vh;
+    }
+
+    #logo-section div #paragrafo h3{
+        font-size: 1.2rem;
+    }
+
+    #logo-section div #paragrafo p{
+        font-size: 1.1rem;
+    }
+
+    #logo-section div img{
+        width: 20%;
+    }
+
+    #logo-section div #paragrafo .scopri{
+        font-size: 1.5rem;
+    }
+    /* AZIENDA */
+
+    #history{
+        flex-direction: column;
+    }
+
+    #history div{
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    div.second::after, div.second::before{
+        display: none;
+    }
+
+    #produzione{
+        width: 70%;
+        
+    }
+
+    #impianto{
+        width: 90%;
+    }
+
+    #impianto p{
+        font-size: 1.1rem;
+    }
+
+    #impianto .container div{
+        height: 20vh;
+    }
+
+    /* PRODOTTI RESPONSIVE TABLET */
+    #evidenza{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: auto;
+    }
+
+    #evidenza div{
+        width: 100%;
+        height: 20vh;
+    }
+
+    #evidenza .description p{
+        margin: 5px auto;
+    }
+
+    #evidenza .images{
+        display: none;
+    }
+
+    #buttons_prodotti{
+        margin: 5vh auto;
+    }
+
+    #buttons_prodotti .btn{
+        font-size: 1rem;
+    }
+
+    #evidenza div:nth-child(3){
+        height: 30vh;
+    }
+
+    .info_prodotti{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info_prodotti h2{
+        margin: 0;
+    }
+
+    .info_prodotti p{
+        display: none;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 767px) {
+    /* HOME RESPONSIVE TELEFONO */
+    header{
+        height: 13vh;
+    }
+
+    #logo{
+        display: none;
+    }
+
+    #background{
+        width: 90%;
+        margin-top: 15vh;
+    }
+
+    #logo-mobile{
+        display: flex;
+        align-items: center;
+        width: 30px;
+        margin: 0;
+    }
+
+    #nav-mobile ul li a{
+        font-size: 1.5rem;
+    }
+
+    #logo-scritta{
+        display: block;
+        margin: 5vh auto;
+        width: 50%;
+        height: auto;
+    }
+
+    #logo-section div{
+        flex-direction: column;
+    }
+
+    #logo-section div img{
+        width: 30%;
+        padding: 0;
+        margin: 20px;
+    }
+
+    #logo-section div{
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    #logo-section div #paragrafo{
+        order: 2;
+        text-align: center;
+    }
+
+    #logo-section div #paragrafo p{
+        text-align: center;
+    }
+
+    .scopri{
+        margin-top: 0;
+    }
+
+    #ce{
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 15vh;
+    }
+
+    #ce:before{
+        right: 50%;
+        top: 80%;
+        transform: translateX(50%);
+    }
+
+    #ce h3, #ce p{
+        text-align: center;
+        margin: 4vh auto;
+    }
+
+    #ce h3{
+        font-size: 1.8rem;
+    }
+
+    #ce p{
+        width: 80%;
+    }
+
+    #spedizioni_consegne{
+        align-items: center;
+    }
+
+    #spedizioni_consegne h3{
+        margin: 0;
+        font-size: 1.8rem;
+    }
+
+    #spedizioni_consegne p{
+        margin: 5vh 0;
+        width: 75%;
+        text-align: center;
+    }
+
+    #spedizioni_consegne::after{
+        display: none;
+    }
+
+    /* AZIENDA RESPONSIVE TELEFONO */
+    #impianto{
+        margin-top: 5vh;
+    }
+
+    #impianto h3{
+        font-size: 2rem;
+    }
+
+    #impianto .container{
+        flex-direction: column;
+    }
+
+    #impianto .container div{
+        width: 70%;
+        height: 25vh;
+        margin: 15px auto;
+    }
+
+    /* PRODOTTI RESPONSIVE TELEFONO */
+    #evidenza::before{
+        font-size: 1rem;
+        top: -10px;
+    }
+
+    #evidenza .description h2{
+        margin-top: 2vh;
+    }
+
+    #buttons_prodotti{
+        flex-direction: column;
+    }
+
+    #buttons_prodotti .btn{
+        width: 80%;
+    }
+
+    #section-prodotti{
+        align-items: flex-start;
+    }
+
+    #section-prodotti h2{
+        font-size: 1.6rem;
+    }
+    
+
+    footer{
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
