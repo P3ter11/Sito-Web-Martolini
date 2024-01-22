@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Fotogallery</title>
+    </head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="../Immagini/LOGO MARTOLINI 2023.svg" alt="logo Martolini"></a>
+        </div>
+
+        <div id="logo-mobile">
+            <a href="index.html"><img src="../Immagini/Logo Martolini mobile.svg" alt="logo Martolini"></a>
+        </div>
+
+        <ul>
+            <a href="index.html"><li>HOME</li></a>
+            <a href="azienda.html"><li>AZIENDA</li></a>
+            <a href="#evidenza"><li class="this_page">PRODOTTI</li></a>
+            <a href="contatti.html"><li class="contatti_nav">CONTATTI
+                <img src="../Immagini/Tel-contatti.svg" alt="logo telefono"></li></a>
+        </ul>
+
+        <div id="hamburger-menu" onclick="clicked()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-mobile">
+            <div id="logo-bianco">
+                <img src="../Immagini/Logo Martolini Bianco.svg" alt="logo Martolini">
+            </div>
+            
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="azienda.html">Azienda</a></li>
+                <li><a href="#evidenza" onclick="clicked()">Prodotti</a></li>
+                <li><a href="index.html#spedizioni_consegne">Spedizioni e consegne</a></li>
+                <li><a href="azienda.html#impianto">Impianto di produzione</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+                <li><a href="#" onclick="clicked()">Fotogallery</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <section id="sections-fotogallery">
+        <div class="card-foto">
+            <div class="overlay">
+                <h2>Azienda</h2>
+            </div>
+        </div>
+        <div class="card-foto">
+            <div class="overlay">
+                <h2>Produzione</h2>
+            </div>
+        </div>
+        <div class="card-foto">
+            <div class="overlay">
+                <h2>I nostri lavori</h2>
+            </div>
+        </div>
+        <div class="card-foto">
+            <div class="overlay">
+                <h2>Prodotti</h2>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

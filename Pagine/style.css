@@ -73,6 +73,7 @@ header ul li{
 
 header ul li:hover:not(.contatti_nav){
     color: #8C131A;
+    transform: scale(1.1);
 }
 
 header .contatti_nav{
@@ -255,7 +256,7 @@ header ul .this_page{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 10vh 0;
+    margin: 10vh auto;
 }
 
 #accesso_prodotti img{
@@ -352,10 +353,25 @@ header ul .this_page{
     width: 80%;
     height: auto;
     margin: 0 auto;
+    position: relative;
+}
+
+#produzione::before{
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    right: -100px;
+    width: 30%;
+    height: 35vh;
+    background-image: url('../Immagini/cataloghi.png');
+    background-size: cover;
+}
+
+#produzione >*{
+    font-size: 1.4rem;
 }
 
 #produzione ul, #produzione p{
-    font-size: 1.4rem;
     margin: 5vh 0;
     list-style-type: square;
 }
@@ -368,17 +384,32 @@ header ul .this_page{
 }
 
 #cantiere{
+    position: relative;
     width: 100%;
-    height: auto;
-    background: rgb(50,48,48);
-    background: linear-gradient(90deg, rgba(50,48,48,1) 0%, rgba(207,22,34,1) 100%);
+    height: 50vh;
+    background-image: url("../Immagini/azienda.jpg");
+    background-size: cover;
+    background-position: 100% 30%;
     color: #fff;
     margin-top: 10vh;
     display: flex;
+    
+}
+
+#cantiere .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Colore nero semitrasparente (adjust alpha per la trasparenza) */
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
     text-align: center;
-    justify-content: space-around;
-    padding: 5%;
+    
 }
 
 #cantiere h3{
@@ -508,17 +539,18 @@ header ul .this_page{
     row-gap: 4%;
 }
 
-#evidenza .images div:nth-child(1){
+#evidenza .images .video video{
     width: 100%;
-    height: 48%;
-    background-image:url("../Immagini/splittato_bif.png");
-    background-size: cover;
-    background-position: center;
+    height: 100%;
+    object-fit: cover;
 }
 
-#evidenza .images div:nth-child(2){
+#evidenza .images div{
     width: 100%;
     height: 48%;
+}
+
+#evidenza .images .posa{
     background-image:url("../Immagini/Splittato.jpeg");
     background-size: cover;
     background-position: center;
@@ -670,8 +702,9 @@ form{
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: 0 10vw;
 }
 
 label{
@@ -696,6 +729,7 @@ input[type = 'submit']{
     font-size: 1.4rem;
     padding: 5px 0;
     cursor: pointer;
+    align-self: flex-end;
 }
 
 label textarea{
@@ -707,7 +741,58 @@ label textarea{
     color: #fff;
     font-family: 'Noto Sans', sans-serif;
 }
+/* PAGINA FOTOGALLERY */
 
+#sections-fotogallery{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-top: 10vh;
+}
+
+#sections-fotogallery .card-foto{
+    position: relative;
+    height: 45vh;
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+#sections-fotogallery .card-foto:nth-child(1){
+    background-image: url('../Immagini/azienda.jpg'); 
+}
+
+#sections-fotogallery .card-foto:nth-child(2){
+    background-image: url('../Immagini/Immagine\ 008.jpg'); 
+}
+.card-foto{
+    overflow: hidden;
+}
+
+.card-foto .overlay h2{
+    transition: .2s;
+}
+
+.card-foto .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Colore nero semitrasparente (adjust alpha per la trasparenza) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover.overlay h2{
+        transform: scale(1.2);
+    }
+}
 
 
 /* FOOTER */
@@ -760,6 +845,10 @@ footer div ul li a:hover{
     header ul{
         display: none;
     }  
+
+    #impianto, #cantiere, #spedizioni_consegne {
+        scroll-margin-top: 100px;
+    }
 
     #logo{
         width: 40%;
@@ -902,15 +991,23 @@ footer div ul li a:hover{
 
     #evidenza div{
         width: 100%;
-        height: 20vh;
     }
 
     #evidenza .description p{
         margin: 5px auto;
     }
 
-    #evidenza .images{
+    #evidenza div:last-child{
         display: none;
+    }
+
+    #evidenza .images{
+        height: 30vh;
+    }
+
+    #evidenza .images .video{
+        width: 100%;
+        height: 100%;
     }
 
     #buttons_prodotti{
@@ -919,10 +1016,7 @@ footer div ul li a:hover{
 
     #buttons_prodotti .btn{
         font-size: 1rem;
-    }
-
-    #evidenza div:nth-child(3){
-        height: 30vh;
+        padding: 15px 0;
     }
 
     .info_prodotti{
@@ -939,6 +1033,26 @@ footer div ul li a:hover{
         display: none;
     }
 
+    /* CONTATTI RESPONSIVE TABLET */
+    #text-info{
+        margin: 15vh auto 5vh auto;
+    }
+
+    #icons{
+        width: 100%;
+    }
+
+    #icons .container img{
+        width: 130px;
+    }
+
+    form{
+        gap: 0 5vw;
+    }
+
+    label{
+        font-size: 1rem;
+    }
 
 }
 
@@ -1003,7 +1117,7 @@ footer div ul li a:hover{
     }
 
     .scopri{
-        margin-top: 0;
+        margin-top: 20px;
     }
 
     #ce{
@@ -1055,6 +1169,14 @@ footer div ul li a:hover{
         margin-top: 5vh;
     }
 
+    #produzione >*{
+        font-size: 1.2rem;
+    }
+
+    #produzione::before{
+        display: none;
+    }
+
     #impianto h3{
         font-size: 2rem;
     }
@@ -1067,6 +1189,10 @@ footer div ul li a:hover{
         width: 70%;
         height: 25vh;
         margin: 15px auto;
+    }
+
+    #cantiere p{
+        width: 90%;
     }
 
     /* PRODOTTI RESPONSIVE TELEFONO */
@@ -1085,16 +1211,47 @@ footer div ul li a:hover{
 
     #buttons_prodotti .btn{
         width: 80%;
+        padding: 20px 0;
     }
 
     #section-prodotti{
         align-items: flex-start;
+        width: 80%;
     }
 
     #section-prodotti h2{
-        font-size: 1.6rem;
+        font-size: 1.2rem;
     }
-    
+
+    /* CONTATTI RESPONSIVE TELEFONO */
+    #text-info{
+        max-width: 90%;
+        font-size: 1rem;
+    }
+
+    #icons{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px 0;
+    }
+
+    #icons .container{
+        row-gap: 20px;
+    }
+
+    input{
+        width: 30vw;
+    }
+
+    label textarea{
+        width: 70vw;
+    }
+
+    #accesso_prodotti{
+        width: 90%;
+    }
+
+        
 
     footer{
         flex-direction: column;
