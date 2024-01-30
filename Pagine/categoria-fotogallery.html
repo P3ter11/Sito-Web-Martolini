@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Fotogallery</title>
+    </head>
+<body>
+<main id="swup" class="transition-fade">
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="../Immagini/LOGO MARTOLINI 2023.svg" alt="logo Martolini"></a>
+        </div>
+
+        <div id="logo-mobile">
+            <a href="index.html"><img src="../Immagini/Logo Martolini mobile.svg" alt="logo Martolini"></a>
+        </div>
+
+        <ul>
+            <a href="index.html"><li>HOME</li></a>
+            <a href="azienda.html"><li>AZIENDA</li></a>
+            <a href="#evidenza"><li>PRODOTTI</li></a>
+            <a href="contatti.html"><li class="contatti_nav">CONTATTI
+                <img src="../Immagini/Tel-contatti.svg" alt="logo telefono"></li></a>
+        </ul>
+
+        <div id="hamburger-menu" onclick="clicked()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="nav-mobile">
+            <div id="logo-bianco">
+                <img src="../Immagini/Logo Martolini Bianco.svg" alt="logo Martolini">
+            </div>
+            
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="azienda.html">Azienda</a></li>
+                <li><a href="prodotti.html">Prodotti</a></li>
+                <li><a href="index.html#spedizioni_consegne">Spedizioni e consegne</a></li>
+                <li><a href="azienda.html#impianto">Impianto di produzione</a></li>
+                <li><a href="contatti.html">Contatti</a></li>
+                <li><a href="#" onclick="clicked()" class="active">Fotogallery</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <section id="category-foto">
+        
+    </section>
+        
+</main>
+    <script type="module">
+        import Swup from 'https://unpkg.com/swup@4?module';
+        const swup = new Swup();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

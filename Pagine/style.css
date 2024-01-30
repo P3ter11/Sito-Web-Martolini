@@ -7,8 +7,8 @@
 }
 html{
     scroll-behavior: smooth;
-    
 }
+
 body{
     font-family: 'Noto Sans', sans-serif;
 }
@@ -202,7 +202,7 @@ header ul .this_page{
     margin-left: 5%;
 }
 
-#impianto, #cantiere, #spedizioni_consegne {
+#impianto, #cantiere, #spedizioni_consegne, #dove-siamo {
     scroll-margin-top: 75px;
 }
 
@@ -249,28 +249,52 @@ header ul .this_page{
     margin-left: 5%;
 }
 
-#accesso_prodotti{
+#accesso-fotogallery{
+    margin: 5vh auto;
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 10vh auto;
 }
 
-#accesso_prodotti img{
-    width: 35%;
+.container-div-gallery{
+    width: 100%;
     height: auto;
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
 }
 
-#accesso_prodotti p{
-    color: black;
+
+
+.container-div-gallery div{
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #a5a5a5;
+}
+
+.card-gallery img{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.card-gallery p{
+    margin: 30px auto;
+}
+
+#accesso-fotogallery p a{
+    color: #8C131A;
     font-size: 1.2rem;
+
 }
 
-#accesso_prodotti p a{
-    color: #CF1622;
+#accesso-fotogallery > p{
+    margin: 5vh auto;
 }
 
 
@@ -469,17 +493,20 @@ header ul .this_page{
     color: #CF1622;
 } 
 
+#fotogallery a:hover{
+    color: #333030;
+}
+
 
 /* PAGINA PRODOTTI */
 #evidenza{
     position: relative;
-    margin: 0 auto;
+    margin: 0 auto 10vh auto;
     width: 90%;
-    height: 80vh;
+    height: 75vh;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 15vh;
 }
 
 #evidenza::before{
@@ -568,13 +595,12 @@ header ul .this_page{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 10vh 0;
+    margin: 15vh auto 5vh auto;
 }
 
 #buttons_prodotti .btn{
-   border: 1px solid #CF1622;
-   color: #CF1622;
-   background: none;
+   color: #333030;
+   border: 1px solid #333030;
    width: 15%;
    height: auto;
    font-size: 1.2rem;
@@ -582,30 +608,31 @@ header ul .this_page{
    align-items: center;
    justify-content: center;
    padding: 10px 0;
-   transition: 0.2s;
+   transition: all 0.2s;
+   cursor: pointer;
 }
 
 #buttons_prodotti .cover{
-    background-color: #CF1622;
+    background-color: #a5a5a5;
     color: #fff;
+    border: 1px solid #a5a5a5;
 }
 
-#buttons_prodotti .btn:hover{
-    cursor: pointer;
-    background-color: #CF1622;
+#buttons_prodotti .btn:hover:not(.cover){
+    background: #333030;
     color: #fff;
 }
 
 #section-prodotti{
     position: relative;
-    margin: 0 auto;
+    margin: 10vh auto;
     display: none;
     align-items: center;
     justify-content: space-around;
     width: 95%;
     /* height: auto; */
     padding: 20px;
-    border: 1px solid #CF1622;
+    border: 1px solid #a5a5a5;
 }
 
 #section-prodotti img{
@@ -635,21 +662,15 @@ header ul .this_page{
     position: absolute;
     bottom: 2%;
     right: 2%;
-    background-color: #fff;
-    border: 1px solid #CF1622;
+    cursor: pointer;
+    background-color: #333030;
+    color: #fff;
     padding: 10px;
     transition: 0.2s;
-    color: #CF1622;
 }
 
 #section_prodotti a{
     text-decoration: none;
-}
-
-#section-prodotti a .download_pdf:hover{
-    cursor: pointer;
-    background-color: #CF1622;
-    color: #fff;
 }
 
 
@@ -741,6 +762,26 @@ label textarea{
     color: #fff;
     font-family: 'Noto Sans', sans-serif;
 }
+
+#dove-siamo{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+#dove-siamo h2{
+    margin-bottom: 10px;
+}
+
+#dove-siamo div{
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 /* PAGINA FOTOGALLERY */
 
 #sections-fotogallery{
@@ -757,6 +798,7 @@ label textarea{
     width: 50%;
     background-size: cover;
     background-position: center;
+    border: 1px solid #fff;
 }
 
 #sections-fotogallery .card-foto:nth-child(1){
@@ -765,6 +807,15 @@ label textarea{
 
 #sections-fotogallery .card-foto:nth-child(2){
     background-image: url('../Immagini/Immagine\ 008.jpg'); 
+}
+
+#sections-fotogallery .card-foto:nth-child(3){
+    background-image: url('../Immagini/fotogallery2.JPG');
+    background-position: 50% 30%; 
+}
+
+#sections-fotogallery .card-foto:nth-child(4){
+    background-image: url('../Immagini/cataloghi-prodotti.JPG');
 }
 .card-foto{
     overflow: hidden;
@@ -794,28 +845,76 @@ label textarea{
     }
 }
 
+#category-foto{
+    position: relative;
+    scroll-margin-top: 10vh;
+    margin: 2vh auto;
+}
+
+#category-foto div{
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Imposta la larghezza minima e massima della colonna */
+    grid-gap: 10px; /* Spazio tra le immagini */
+    grid-auto-rows: 1fr;
+}
+
+#category-foto div img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+i.fa-arrow-up{
+    content: "";
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    color: #fff;
+}
 
 /* FOOTER */
 footer{
     background-color: #333030;
     width: 100%;
     height: auto;
-    display: flex;
-    justify-content: space-evenly;
     margin-top: 5vh;
+}
+
+footer li{
+    list-style: none;
+}
+
+footer .info-aziendali{
+    display: flex;
+    color: #ffffff;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    line-height: 25px;
+    border-bottom: 1px solid #fff;
     padding: 20px;
 }
 
-footer div{
-    display: flex;
-    color: #ffffff;
-    flex-direction: column;
-    width: auto;
-    height: 100%;
-    margin: 0 50px;
-    line-height: 25px;
+footer .info-aziendali div{
+    margin: 0 10px;
 }
 
+footer .info-pagine{
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #fff;
+}
+footer .info-pagine ul{
+    display: flex;
+}
+
+footer .info-pagine ul li{
+    margin: 0 10px;
+}
 
 
 footer div img{
@@ -837,8 +936,10 @@ footer div ul li a:hover{
 }
 
 @media only screen and (max-width: 1024px) {
+
     /* HOME */
     header{
+        height: 12vh;
         padding: 0 7%;
     }
 
@@ -846,8 +947,8 @@ footer div ul li a:hover{
         display: none;
     }  
 
-    #impianto, #cantiere, #spedizioni_consegne {
-        scroll-margin-top: 100px;
+    #impianto, #cantiere, #spedizioni_consegne, #category-foto, #dove-siamo {
+        scroll-margin-top: 90px;
     }
 
     #logo{
@@ -932,7 +1033,7 @@ footer div ul li a:hover{
 
     #background{
         width: 100%;
-        margin-top: 10vh;
+        margin-top: 12vh;
     }
 
     #logo-section div #paragrafo h3{
@@ -950,6 +1051,17 @@ footer div ul li a:hover{
     #logo-section div #paragrafo .scopri{
         font-size: 1.5rem;
     }
+
+    .container-div-gallery{
+        column-gap: 30px;
+    }
+
+    .card-gallery img{
+        width: 100%;
+        height: 10vh;
+        object-fit: cover;
+    }
+
     /* AZIENDA */
 
     #history{
@@ -967,7 +1079,10 @@ footer div ul li a:hover{
 
     #produzione{
         width: 70%;
-        
+    }
+
+    #produzione::before{
+        display: none;
     }
 
     #impianto{
@@ -1011,11 +1126,11 @@ footer div ul li a:hover{
     }
 
     #buttons_prodotti{
-        margin: 5vh auto;
+        margin-top: 15vh;
     }
 
     #buttons_prodotti .btn{
-        font-size: 1rem;
+        font-size: .9rem;
         padding: 15px 0;
     }
 
@@ -1052,6 +1167,29 @@ footer div ul li a:hover{
 
     label{
         font-size: 1rem;
+    }
+
+    #icons{
+        width: 90%;
+    }
+
+    #dove-siamo{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #dove-siamo div{
+        width: 100%;
+        margin: 2vh auto;
+    }
+
+    #dove-siamo div iframe{
+        width: 100%;
+    }
+
+    #dove-siamo div:nth-child(1){
+        width: 90%;
     }
 
 }
@@ -1164,6 +1302,22 @@ footer div ul li a:hover{
         display: none;
     }
 
+    .container-div-gallery{
+        row-gap: 30px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container-div-gallery div{
+        width: 90%;
+        height: auto;  
+        margin: 0 auto;
+    }
+
+    .card-gallery img{
+        height: 30vh; 
+    }
+
     /* AZIENDA RESPONSIVE TELEFONO */
     #impianto{
         margin-top: 5vh;
@@ -1171,10 +1325,6 @@ footer div ul li a:hover{
 
     #produzione >*{
         font-size: 1.2rem;
-    }
-
-    #produzione::before{
-        display: none;
     }
 
     #impianto h3{
@@ -1247,9 +1397,6 @@ footer div ul li a:hover{
         width: 70vw;
     }
 
-    #accesso_prodotti{
-        width: 90%;
-    }
 
         
 

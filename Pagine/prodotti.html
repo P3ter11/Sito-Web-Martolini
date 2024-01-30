@@ -9,6 +9,7 @@
     <title>Prodotti</title>
 </head>
 <body>
+    
     <header>
         <div id="logo">
             <a href="index.html"><img src="../Immagini/LOGO MARTOLINI 2023.svg" alt="logo Martolini"></a>
@@ -49,6 +50,29 @@
         </nav>
         
     </header>
+    
+
+    
+
+    <section id = "buttons_prodotti">
+        <div class="btn" onclick="getProdotti(this)">Muratura</div>
+        <div class="btn" onclick="getProdotti(this)">Recinzione</div>
+        <div class="btn" onclick="getProdotti(this)">Anelli / Pozzetti</div>
+        <div class="btn" onclick="getProdotti(this)">Chiusini</div>
+        <div class="btn" onclick="getProdotti(this)">Fognatura</div>
+        <div class="btn" onclick="getProdotti(this)">Stradale</div>
+    </section>
+
+    <main id="section-prodotti">
+        <img class = "img_prodotti" src="" alt="Immagine prodotti">
+        <div class="info_prodotti">
+            <h2></h2>
+            <p></p>
+        </div>
+        <a target="_blank">
+            <div class="download_pdf">Scarica il PDF</div>
+        </a>
+    </main>
 
     <section id="evidenza">   
         <div class="description">
@@ -76,71 +100,43 @@
         <div></div>
     </section>
 
-    <section id = "buttons_prodotti">
-        <div class="btn" onclick="getProdotti(this)">Muratura</div>
-        <div class="btn" onclick="getProdotti(this)">Recinzione</div>
-        <div class="btn" onclick="getProdotti(this)">Anelli / Pozzetti</div>
-        <div class="btn" onclick="getProdotti(this)">Chiusini</div>
-        <div class="btn" onclick="getProdotti(this)">Fognatura</div>
-        <div class="btn" onclick="getProdotti(this)">Stradale</div>
-    </section>
 
-    <main id="section-prodotti">
-        <img class = "img_prodotti" src="" alt="Immagine prodotti">
-        <div class="info_prodotti">
-            <h2></h2>
-            <p></p>
-        </div>
-        <a target="_blank">
-            <div class="download_pdf">Scarica il PDF</div>
-        </a>
-    </main>
 
     <footer>
-        <div>
-            
-            <ul>
-                <h4>Informazioni aziendali:</h4>
-                <li><a href="index.html">F.lli Martolini - Prefabbricati in cemento</a></li>
-                <li><a href="azienda.html#cantiere">Il nostro cantiere</a></li>
-                <li><a href="#">Prodotti</a></li>
-                <li><a href="index.html#spedizioni_consegne">Spedizioni e consegne</a></li>
-                <li><a href="azienda.html#impianto">Impianto di produzione</a></li>
-                <li><a href="#">Fotogallery</a></li>
-            </ul>
-        </div>
+        <div class = "info-aziendali">
+            <div>
+                <ul>
+                    <h4>Informazioni aziendali:</h4>
+                    <li><a href="index.html">F.lli Martolini - Prefabbricati in cemento</a></li>
+                    <li><a href="azienda.html#cantiere">Il nostro cantiere</a></li>
+                    <li><a href="prodotti.html#buttons_prodotti">Prodotti</a></li>
+                    <li><a href="index.html#spedizioni_consegne">Spedizioni e consegne</a></li>
+                    <li><a href="azienda.html#impianto">Impianto di produzione</a></li>
+                    <li><a href="fotogallery.html">Fotogallery</a></li>
+                </ul>
+            </div>
 
-        <div>
+            <div>
+                <ul style = "text-align: right; ">
+                    <li><b>Sede legale:</b> Via F.Villani, 2 - 29600 Lodi (LO)</li>
+                    <li><b>Cap. Soc:</b> €60.000,00</li>
+                    <li><b>P.IVA e C.F:</b> 11963190159</li>
+                    <li><b>R.E.A.</b> 82484</li>
+                    <li><b>ISCR. REG. IMPR.</b> 1443075</li>
+                    <li><b>Sede operativa:</b> Via Piave 15 - 20087 Robecco sul Naviglio</li>
+                    <li><b>Tel.</b> +39 029470534</li>
+                </ul>
+            </div>
+        </div>
+        <div class="info-pagine">
             <ul>
-                <h4>Pagine:</h4>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="azienda.html">Azienda</a></li>
                 <li><a href="#">Prodotti</a></li>
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
         </div>
-        
-        <div>
-            <ul>
-                <h4>Sede operativa:</h4>
-                <li>Via Piave 15 - 20087 Robecco sul Naviglio</li>
-                <li>Tel. +39 029470534</li>
-            </ul>
-            
-        </div>
-
-        <div>
-            <ul>
-                <h4>Sede legale:</h4>
-                <li>Via F.Villani, 2 - 29600 Lodi (LO)</li>
-                <li>Cap. Soc: €60.000,00</li>
-                <li>P.IVA e C.F: 11963190159</li>
-                <li>R.E.A. 82484</li>
-                <li>ISCR. REG. IMPR. 1443075</li>
-            </ul>
-        </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 

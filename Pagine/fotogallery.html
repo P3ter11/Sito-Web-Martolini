@@ -19,7 +19,7 @@
         <ul>
             <a href="index.html"><li>HOME</li></a>
             <a href="azienda.html"><li>AZIENDA</li></a>
-            <a href="#evidenza"><li class="this_page">PRODOTTI</li></a>
+            <a href="prodotti.html"><li>PRODOTTI</li></a>
             <a href="contatti.html"><li class="contatti_nav">CONTATTI
                 <img src="../Immagini/Tel-contatti.svg" alt="logo telefono"></li></a>
         </ul>
@@ -36,13 +36,13 @@
             </div>
             
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="azienda.html">Azienda</a></li>
-                <li><a href="#evidenza" onclick="clicked()">Prodotti</a></li>
+                <li><a href="prodotti.html">Prodotti</a></li>
                 <li><a href="index.html#spedizioni_consegne">Spedizioni e consegne</a></li>
                 <li><a href="azienda.html#impianto">Impianto di produzione</a></li>
                 <li><a href="contatti.html">Contatti</a></li>
-                <li><a href="#" onclick="clicked()">Fotogallery</a></li>
+                <li><a href="#" onclick="clicked()" class="active">Fotogallery</a></li>
             </ul>
         </nav>
         
@@ -50,26 +50,60 @@
 
     <section id="sections-fotogallery">
         <div class="card-foto">
-            <div class="overlay">
-                <h2>Azienda</h2>
-            </div>
+            <a href="#category-foto">
+                <div class="overlay" onclick="showGallery(this)">
+                    <h2>Azienda</h2>
+                </div>
+            </a>
         </div>
         <div class="card-foto">
-            <div class="overlay">
-                <h2>Produzione</h2>
-            </div>
+            <a href="#category-foto">
+                <div class="overlay" onclick="showGallery(this)">
+                    <h2>Linea di produzione</h2>
+                </div>
+            </a>
         </div>
         <div class="card-foto">
-            <div class="overlay">
-                <h2>I nostri lavori</h2>
-            </div>
+            <a href="#category-foto">
+                <div class="overlay" onclick="showGallery(this)">
+                    <h2>I nostri lavori</h2>
+                </div>
+            </a>
         </div>
         <div class="card-foto">
-            <div class="overlay">
-                <h2>Prodotti</h2>
-            </div>
+            <a href="#category-foto">
+                <div class="overlay" onclick="showGallery(this)">
+                    <h2>I nostri prodotti</h2>
+                </div>
+            </a>
         </div>
     </section>
+
+    <section id="category-foto">
+        <div id = "category-azienda" class = "target">
+           <img src="../Immagini/azienda.jpg" alt="Immagine1 Azienda">
+           <img src="../Immagini/fotogallery.jpg" alt="Immagine1 Azienda">
+           <img src="../Immagini/fotogallery2.jpg" alt="Immagine1 Azienda">
+           <img src="../Immagini/fotogallery3.jpg" alt="Immagine1 Azienda">
+           <img src="../Immagini/recinzione.jpg" alt="Immagine1 Azienda">
+           <img src="../Immagini/azienda.jpg" alt="Immagine1 Azienda">
+           <img src="../Immagini/fotogallery.jpg" alt="Immagine1 Azienda">
+           <img src="../Immagini/fotogallery2.JPG" alt="Immagine1 Azienda">
+           <img src="../Immagini/fotogallery3.JPG" alt="Immagine1 Azienda">
+        </div>
+        <div id = "category-produzione" class = "target">
+            <img src="../Immagini/fotogallery2.JPG" alt="Immagine1 Azienda">
+            <img src="../Immagini/fotogallery.jpg" alt="Immagine1 Azienda">
+            <img src="../Immagini/azienda.jpg" alt="Immagine1 Azienda">
+            <img src="../Immagini/fotogallery3.jpg" alt="Immagine1 Azienda">
+            <img src="../Immagini/recinzione.jpg" alt="Immagine1 Azienda">
+            <img src="../Immagini/azienda.jpg" alt="Immagine1 Azienda">
+            <img src="../Immagini/fotogallery.jpg" alt="Immagine1 Azienda">
+            <img src="../Immagini/fotogallery2.JPG" alt="Immagine1 Azienda">
+            <img src="../Immagini/fotogallery3.JPG" alt="Immagine1 Azienda">
+         </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>

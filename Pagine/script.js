@@ -116,7 +116,82 @@ const arrayProdotti = [
 
         ],
     }
-]
+];
+
+const fotogallery = [
+    {
+        nome: "Azienda",
+        immagini: [
+            "../Immagini/azienda.jpg",
+            "../Immagini/fotogallery.jpg",
+            "../Immagini/fotogallery2.jpg",
+            "../Immagini/fotogallery3.jpg",
+            "../Immagini/recinzione.jpg",
+            "../Immagini/azienda.jpg",
+            "../Immagini/recinzione.jpg",
+            "../Immagini/fotogallery3.jpg",
+            "../Immagini/azienda.jpg",
+            "../Immagini/recinzione.jpg",
+            "../Immagini/fotogallery2.jpg",
+            "../Immagini/fotogallery3.jpg",
+            
+        ],
+    },
+    {
+        nome: "Linea di produzione",
+        immagini: [
+            "../Immagini/azienda.jpg",
+            "../Immagini/fotogallery.jpg",
+            "../Immagini/fotogallery2.jpg",
+            "../Immagini/fotogallery3.jpg",
+            "../Immagini/recinzione.jpg",
+            "../Immagini/azienda.jpg",
+            "../Immagini/recinzione.jpg",
+            "../Immagini/fotogallery3.jpg",
+            "../Immagini/azienda.jpg",
+            "../Immagini/recinzione.jpg",
+            "../Immagini/fotogallery2.jpg",
+            "../Immagini/fotogallery3.jpg",
+            
+        ],
+    },
+    {
+        nome: "I nostri lavori",
+        immagini: [
+            "../Immagini/azienda.jpg",
+            "../Immagini/fotogallery.jpg",
+            "../Immagini/fotogallery2.jpg",
+            "../Immagini/fotogallery3.jpg",
+            "../Immagini/recinzione.jpg",
+            "../Immagini/azienda.jpg",
+            "../Immagini/recinzione.jpg",
+            "../Immagini/fotogallery3.jpg",
+            "../Immagini/azienda.jpg",
+            "../Immagini/recinzione.jpg",
+            "../Immagini/fotogallery2.jpg",
+            "../Immagini/fotogallery3.jpg",
+            
+        ],
+    },
+    {
+        nome: "I nostri prodotti",
+        immagini: [
+            "../Immagini/azienda.jpg",
+            "../Immagini/fotogallery.jpg",
+            "../Immagini/fotogallery2.jpg",
+            "../Immagini/fotogallery3.jpg",
+            "../Immagini/recinzione.jpg",
+            "../Immagini/azienda.jpg",
+            "../Immagini/recinzione.jpg",
+            "../Immagini/fotogallery3.jpg",
+            "../Immagini/azienda.jpg",
+            "../Immagini/recinzione.jpg",
+            "../Immagini/fotogallery2.jpg",
+            "../Immagini/fotogallery3.jpg",
+            
+        ],
+    }
+];
 
 
 let main = document.getElementById("section-prodotti");
@@ -151,25 +226,63 @@ function getProdotti(element){
         
 }
 
-let click = false;
+let clickMenu = false;
 
 function clicked(){
     let menu = document.getElementById("hamburger-menu");
     let nav = document.getElementById('nav-mobile');
 
-    if(!click){
+    if(!clickMenu){
         menu.classList.add("active-hamburger");
         nav.classList.add("show");
-        click = true;
+        clickMenu = true;
     }
     else{
         menu.classList.remove("active-hamburger");
         nav.classList.remove("show");
-        click = false;
+        clickMenu = false;
     }
 }
 
+function showGallery(element){
+    let gallery = document.getElementById("category-foto");
+    let target = document.querySelectorAll(".target");
+    for(let i = 0; i<target.length; i++){
+        target[i].style.display="none";
+    }
+    /* for(let i=0; i<fotogallery.length; i++){
+        if(element.innerText === fotogallery[i].nome){
+            for (image of fotogallery[i].immagini) {
+                let containerImg = document.createElement("img");
+                containerImg.src = image;
+                gallery.appendChild(containerImg);
+                console.log(containerImg);
+            }
+        }
+    } */
+    switch(element.innerText){
+        case "Azienda":
+            let immAzienda = document.getElementById("category-azienda");
+            immAzienda.style.display = "grid";
+        break;
+        case "Linea di produzione":
+            let immProduzione = document.getElementById("category-produzione");
+            immProduzione.style.display = "grid";
+        break;
+        case "I nostri lavori":
+            let immLavori = document.getElementById("category-lavori");
+            immLavori.style.display = "grid";
+        break;
+        case "I nostri prodotti":
+            let immProdotti = document.getElementById("category-prdotti");
+            immProdotti.style.display = "grid";
+        break;
 
+    }
+    gallery.innerHTML += "<a href = '#'><i class='fa-solid fa-arrow-up'></i></a>";
+
+    
+}
 
 
 
