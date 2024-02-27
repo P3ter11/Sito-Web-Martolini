@@ -7,6 +7,7 @@
         <title>Fotogallery</title>
     </head>
 <body>
+
     <header>
         <div id="logo">
             <a href="index.html"><img src="../Immagini/LOGO MARTOLINI 2023.svg" alt="logo Martolini"></a>
@@ -21,7 +22,7 @@
             <a href="azienda.html"><li>AZIENDA</li></a>
             <a href="prodotti.html"><li>PRODOTTI</li></a>
             <a href="contatti.html"><li class="contatti_nav">CONTATTI
-                <img src="../Immagini/Tel-contatti.svg" alt="logo telefono"></li></a>
+            <img src="../Immagini/Tel-contatti.svg" alt="logo telefono"></li></a>
         </ul>
 
         <div id="hamburger-menu" onclick="clicked()">
@@ -79,6 +80,31 @@
         </div>
     </section>
 
+    <script>
+    window.onload = function() {
+        let urlParam = new URLSearchParams(window.location.search);
+        let category = urlParam.get('gallery');
+        console.log(category);
+
+        if (category === "azienda") {
+            let images = document.getElementById('category-azienda');
+            images.style.display = "grid";
+        } else if (category === "produzione") {
+            let images = document.getElementById('category-produzione');
+            images.style.display = "grid";
+        } else if (category === "lavori") {
+            let images = document.getElementById('category-lavori');
+            images.style.display = "grid";
+        } else if (category === "prodotti") {
+            let images = document.getElementById('category-prodotti');
+            images.style.display = "grid";
+        }
+        document.getElementById('category-foto').scrollIntoView();
+    };
+
+        
+    </script>
+
     <section id="category-foto">
         <div id = "category-azienda" class = "target">
            <img src="../Immagini/azienda.jpg" alt="Immagine1 Azienda">
@@ -91,16 +117,41 @@
            <img src="../Immagini/fotogallery2.JPG" alt="Immagine1 Azienda">
            <img src="../Immagini/fotogallery3.JPG" alt="Immagine1 Azienda">
         </div>
+
         <div id = "category-produzione" class = "target">
-            <img src="../Immagini/fotogallery2.JPG" alt="Immagine1 Azienda">
-            <img src="../Immagini/fotogallery.jpg" alt="Immagine1 Azienda">
-            <img src="../Immagini/azienda.jpg" alt="Immagine1 Azienda">
-            <img src="../Immagini/fotogallery3.jpg" alt="Immagine1 Azienda">
-            <img src="../Immagini/recinzione.jpg" alt="Immagine1 Azienda">
-            <img src="../Immagini/azienda.jpg" alt="Immagine1 Azienda">
-            <img src="../Immagini/fotogallery.jpg" alt="Immagine1 Azienda">
-            <img src="../Immagini/fotogallery2.JPG" alt="Immagine1 Azienda">
-            <img src="../Immagini/fotogallery3.JPG" alt="Immagine1 Azienda">
+            <img src="../Immagini/Fotogallery/produzione 1.jpg" alt="Immagine Azienda">
+            <img src="../Immagini/Fotogallery/produzione 2.jpg" alt="Immagine Azienda">
+            <img src="../Immagini/Fotogallery/produzione 3.jpg" alt="Immagine Azienda">
+            <img src="../Immagini/Fotogallery/produzione 4.jpg" alt="Immagine Azienda">
+            <img src="../Immagini/Fotogallery/produzione 5.jpg" alt="Immagine Azienda">
+            <img src="../Immagini/Fotogallery/produzione 6.jpg" alt="Immagine Azienda">
+            <img src="../Immagini/Fotogallery/produzione 7.jpg" alt="Immagine Azienda">
+            <img src="../Immagini/Fotogallery/produzione 8.jpg" alt="Immagine Azienda">
+            <img src="../Immagini/Fotogallery/produzione 9.jpg" alt="Immagine Azienda">
+         </div>
+
+         <div id = "category-lavori" class = "target">
+            <img src="../Immagini/Fotogallery/produzione 1.jpg" alt="Immagine Lavori">
+            <img src="../Immagini/Fotogallery/produzione 2.jpg" alt="Immagine Lavori">
+            <img src="../Immagini/Fotogallery/produzione 3.jpg" alt="Immagine Lavori">
+            <img src="../Immagini/Fotogallery/produzione 4.jpg" alt="Immagine Lavori">
+            <img src="../Immagini/Fotogallery/produzione 5.jpg" alt="Immagine Lavori">
+            <img src="../Immagini/Fotogallery/produzione 6.jpg" alt="Immagine Lavori">
+            <img src="../Immagini/Fotogallery/produzione 7.jpg" alt="Immagine Lavori">
+            <img src="../Immagini/Fotogallery/produzione 8.jpg" alt="Immagine Lavori">
+            <img src="../Immagini/Fotogallery/produzione 9.jpg" alt="Immagine Lavori">
+         </div>
+
+         <div id = "category-prodotti" class = "target">
+            <img src="../Immagini/Fotogallery/produzione 1.jpg" alt="Immagine Prodotti">
+            <img src="../Immagini/Fotogallery/produzione 2.jpg" alt="Immagine Prodotti">
+            <img src="../Immagini/Fotogallery/produzione 3.jpg" alt="Immagine Prodotti">
+            <img src="../Immagini/Fotogallery/produzione 4.jpg" alt="Immagine Prodotti">
+            <img src="../Immagini/Fotogallery/produzione 5.jpg" alt="Immagine Prodotti">
+            <img src="../Immagini/Fotogallery/produzione 6.jpg" alt="Immagine Prodotti">
+            <img src="../Immagini/Fotogallery/produzione 7.jpg" alt="Immagine Prodotti">
+            <img src="../Immagini/Fotogallery/produzione 8.jpg" alt="Immagine Prodotti">
+            <img src="../Immagini/Fotogallery/produzione 9.jpg" alt="Immagine Prodotti">
          </div>
     </section>
 

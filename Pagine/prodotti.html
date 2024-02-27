@@ -9,6 +9,10 @@
     <title>Prodotti</title>
 </head>
 <body>
+
+    <div id="loader">
+        <img src="../Immagini/loader.svg" alt="Caricamento...">
+    </div>
     
     <header>
         <div id="logo">
@@ -22,7 +26,7 @@
         <ul>
             <a href="index.html"><li>HOME</li></a>
             <a href="azienda.html"><li>AZIENDA</li></a>
-            <a href="#evidenza"><li class="this_page">PRODOTTI</li></a>
+            <a href="#"><li class="this_page">PRODOTTI</li></a>
             <a href="contatti.html"><li class="contatti_nav">CONTATTI
                 <img src="../Immagini/Tel-contatti.svg" alt="logo telefono"></li></a>
         </ul>
@@ -54,25 +58,63 @@
 
     
 
-    <section id = "buttons_prodotti">
-        <div class="btn" onclick="getProdotti(this)">Muratura</div>
-        <div class="btn" onclick="getProdotti(this)">Recinzione</div>
-        <div class="btn" onclick="getProdotti(this)">Anelli / Pozzetti</div>
-        <div class="btn" onclick="getProdotti(this)">Chiusini</div>
-        <div class="btn" onclick="getProdotti(this)">Fognatura</div>
-        <div class="btn" onclick="getProdotti(this)">Stradale</div>
+    <section id = "section_prodotti">
+        <div class="buttons_prodotti">
+            <h3 class="btn" data-target = "muratura">Muratura</h3>
+            <h3 class="btn" data-target = "recinzione">Recinzione</h3>
+            <h3 class="btn" data-target = "anelli">Anelli / Pozzetti</h3>
+            <h3 class="btn" data-target = "chiusini">Chiusini</h3>
+            <h3 class="btn" data-target = "fognatura">Fognatura</h3>
+            <h3 class="btn" data-target = "stradale">Stradale</h3>
+        </div>
+        <div class="container_prodotti">
+            <div class="content cover" id="muratura">
+                <div class="pr">
+                    <h1>Muratura</h1>
+                    <p></p>
+                    <a target="_blank" href="../Download/Costruzione.pdf"><button class ="button_pdf">Scarica PDF</button></a>
+                </div>
+            </div>
+            <div class="content" id="recinzione">
+                <div class="pr">
+                    <h1>Recinzione</h1>
+                    <p></p>
+                    <a  target="_blank" href="../Download/Recinzione.pdf"><button class ="button_pdf">Scarica PDF</button></a>
+                </div>
+            </div>
+            <div class="content" id="anelli">
+                <div class="pr">
+                    <h1>Anelli / Pozzetti</h1>
+                    <p></p>
+                    <a  target="_blank" href="../Download/Anelli-Pozzetti.pdf"><button class ="button_pdf">Scarica PDF</button></a>
+                </div>
+            </div>
+            <div class="content" id="chiusini">
+                <div class="pr">
+                    <h1>Chiusini</h1>
+                    <p></p>
+                    <a  target="_blank" href="../Download/Chiusini.pdf"><button class ="button_pdf">Scarica PDF</button></a>
+                </div>
+            </div>
+            <div class="content" id="fognatura">
+                <div class="pr">
+                    <h1>Fognatura</h1>
+                    <p></p>
+                    <a target="_blank" href="../Download/Fognatura.pdf"><button class ="button_pdf">Scarica PDF</button></a>
+                </div>
+            </div>
+            <div class="content" id="stradale">
+                <div class="pr">
+                    <h1>Stradale</h1>
+                    <p></p>
+                    <a target="_blank" href="../Download/Stradale.pdf"><button class ="button_pdf">Scarica PDF</button></a>
+                </div>
+            </div>
+        </div>
+        
     </section>
 
-    <main id="section-prodotti">
-        <img class = "img_prodotti" src="" alt="Immagine prodotti">
-        <div class="info_prodotti">
-            <h2></h2>
-            <p></p>
-        </div>
-        <a target="_blank">
-            <div class="download_pdf">Scarica il PDF</div>
-        </a>
-    </main>
+   
 
     <section id="evidenza">   
         <div class="description">
@@ -84,7 +126,7 @@
                colori: grigio, rosso, senape, antracite, nocciola per adattarsi allo stile di ogni 
                costruzione.
             </p>
-            <a href="../Download/Volantino Splittato Bifaccia.pdf" target="_blank" download="Blocco Splittato Bifaccia">
+            <a href="../Download/Volantino Splittato Bifaccia.pdf" target="_blank">
                 <button>Scopri di più</button>
             </a>
         </div>
@@ -117,13 +159,13 @@
             </div>
 
             <div>
-                <ul style = "text-align: right; ">
+                <ul>
                     <li><b>Sede legale:</b> Via F.Villani, 2 - 29600 Lodi (LO)</li>
                     <li><b>Cap. Soc:</b> €60.000,00</li>
                     <li><b>P.IVA e C.F:</b> 11963190159</li>
                     <li><b>R.E.A.</b> 82484</li>
                     <li><b>ISCR. REG. IMPR.</b> 1443075</li>
-                    <li><b>Sede operativa:</b> Via Piave 15 - 20087 Robecco sul Naviglio</li>
+                    <li><b>Sede operativa:</b><br>Via Piave 15 - 20087 Robecco sul Naviglio</li>
                     <li><b>Tel.</b> +39 029470534</li>
                 </ul>
             </div>
@@ -135,8 +177,11 @@
                 <li><a href="#">Prodotti</a></li>
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
+            <a href="../Download/Privacy Policy Martolini SRL.pdf" target="_blank">Privacy Policy</a>
+            <p>I contenuti e le immagini sono soggette a diritto d'autore ©</p>
         </div>
     </footer>
+    <script src="script_prodotti.js"></script>
     <script src="script.js"></script>
 </body>
 

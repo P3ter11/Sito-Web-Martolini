@@ -1,16 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+#loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff; /* Sfondo semi-trasparente */
+    z-index: 9999; /* Assicura che il loader sia sopra gli altri elementi */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader img{
+    width: 10%;
+    height: auto;
+    animation: spin 2s linear infinite;
+    position: relative;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 html{
     scroll-behavior: smooth;
+    cursor: default;
 }
 
 body{
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 body,section,main{
@@ -250,7 +276,7 @@ header ul .this_page{
 }
 
 #accesso-fotogallery{
-    margin: 5vh auto;
+    margin: 10vh auto;
     width: 100%;
     height: auto;
     display: flex;
@@ -267,10 +293,13 @@ header ul .this_page{
     column-gap: 50px;
 }
 
-
+.container-div-gallery a{
+    width: 20%;
+    color: black;
+}
 
 .container-div-gallery div{
-    width: 20%;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -411,8 +440,9 @@ header ul .this_page{
     position: relative;
     width: 100%;
     height: 50vh;
-    background-image: url("../Immagini/azienda.jpg");
+    background-image: url("../Immagini/azienda2.jpg");
     background-size: cover;
+    background-attachment: fixed;
     background-position: 100% 30%;
     color: #fff;
     margin-top: 10vh;
@@ -426,7 +456,7 @@ header ul .this_page{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Colore nero semitrasparente (adjust alpha per la trasparenza) */
+    background-color: rgba(0, 0, 0, 0.6); /* Colore nero semitrasparente (adjust alpha per la trasparenza) */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -518,7 +548,7 @@ header ul .this_page{
     color: #fff;
     background-color: #8C131A;
     top: -15px;
-    right: -20px;
+    right: -15px;
     
 }
 
@@ -589,84 +619,126 @@ header ul .this_page{
     background-position: center;
 }
 
-#buttons_prodotti{
-    width: 100%;
+#section_prodotti{
+    width: 90%;
+    height: 600px;
+    display: flex;
+    margin: 120px auto;
+}
+
+.buttons_prodotti{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.buttons_prodotti .btn{
+    font-size: 1.5rem;
+    opacity: 0.7;
+    transition: all .2s ease;
+
+    &:hover{
+        opacity: 1;
+        cursor: pointer;
+        transform: translateX(10px);
+    }
+}
+
+.container_prodotti{
+    width: 80%;
     height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.container_prodotti .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: all .2s ease-in-out;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    margin: 15vh auto 5vh auto;
+    justify-content: center;
 }
 
-#buttons_prodotti .btn{
-   color: #333030;
-   border: 1px solid #333030;
-   width: 15%;
-   height: auto;
-   font-size: 1.2rem;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   padding: 10px 0;
-   transition: all 0.2s;
-   cursor: pointer;
+#muratura {
+    background-image: url('../Categoria/costruzione.webp');
 }
 
-#buttons_prodotti .cover{
-    background-color: #a5a5a5;
-    color: #fff;
-    border: 1px solid #a5a5a5;
+#recinzione{
+    background-image: url('../Categoria/recinzione.webp');
+    background-position: top;
 }
 
-#buttons_prodotti .btn:hover:not(.cover){
-    background: #333030;
-    color: #fff;
+#anelli{
+    background-image: url('../Categoria/anelli-pozzetti.webp');
 }
 
-#section-prodotti{
-    position: relative;
-    margin: 10vh auto;
-    display: none;
-    align-items: center;
+#chiusini{
+    background-image: url('../Categoria/chiusini.webp');
+    background-position: top;
+}
+
+#fognatura{
+    background-image: url('../Categoria/fognatura.webp');
+    background-position: top;
+}
+
+#stradale{
+    background-image: url('../Categoria/stradale.webp');
+}
+
+.content .pr{
+    width: 60%;
+    height: 80%;
+    background-color: #333030;
+    opacity: 0.7;
+    transition: opacity .2s ease;
+    display: flex;
     justify-content: space-around;
-    width: 95%;
-    /* height: auto; */
+    flex-direction: column;
     padding: 20px;
-    border: 1px solid #a5a5a5;
+
+    &:hover{
+        opacity: 1;
+    }
 }
 
-#section-prodotti img{
-    width: 40%;
-    height: auto;
-    transition: 0.2s;
+.content .pr p{
+    color: #fff;
+    line-height: 30px;
 }
 
-
-.info_prodotti{
-    width: 50%;
-    height: auto;
-    font-size: 1.1rem;
-    transition: 0.2s;
+.cover{
+    z-index: 2;
 }
 
-.info_prodotti h2{
-    margin-bottom: 20px;
+.pr h1{
+    color: #fff;
 }
 
-.info_prodotti p{
-    line-height: 27px;
-}
-
-#section-prodotti a .download_pdf{
-    content: "Scarica il PDF";
-    position: absolute;
-    bottom: 2%;
-    right: 2%;
-    cursor: pointer;
+.button_pdf{
     background-color: #333030;
     color: #fff;
-    padding: 10px;
-    transition: 0.2s;
+    border: 1px solid #fff;
+    padding: 8px 10px;
+    height: auto;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+
+.button_pdf:hover{
+    background: #fff;
+    color: #333030;
 }
 
 #section_prodotti a{
@@ -733,10 +805,18 @@ label{
     font-size: 1.3rem;
 }
 
-input{
+label input[type = "checkbox"]:checked{
+    background-color: #CF1622;
+}
+
+label.check_privacy a{
+    color: #CF1622;
+    border-bottom: 1px solid;
+}
+
+input:not([type = "checkbox"]){
     background-color: transparent;
     border: 2px solid #fff;
-    width: 15vw;
     padding: 5px 0;
     color: #fff;
     margin: 5px 0;
@@ -747,6 +827,7 @@ input{
 input[type = 'submit']{
     background-color: #fff;
     color:#333030;
+    width: 15vw;
     font-size: 1.4rem;
     padding: 5px 0;
     cursor: pointer;
@@ -875,12 +956,25 @@ i.fa-arrow-up{
     color: #fff;
 }
 
+/* PRIVACY */
+#container-privacy{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 130px;
+}
+
 /* FOOTER */
 footer{
     background-color: #333030;
     width: 100%;
     height: auto;
     margin-top: 5vh;
+    color: #fff;
+}
+
+footer .info-aziendali div:last-child{
+    text-align: right;
 }
 
 footer li{
@@ -892,7 +986,6 @@ footer .info-aziendali{
     color: #ffffff;
     width: 100%;
     justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
     line-height: 25px;
     border-bottom: 1px solid #fff;
@@ -907,6 +1000,9 @@ footer .info-pagine{
     width: 100%;
     padding: 20px;
     border-bottom: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 footer .info-pagine ul{
     display: flex;
@@ -914,6 +1010,10 @@ footer .info-pagine ul{
 
 footer .info-pagine ul li{
     margin: 0 10px;
+}
+
+footer .info-pagine a{
+    color: #fff;
 }
 
 
@@ -931,7 +1031,7 @@ footer div ul li a{
     color: #ffffff;
 }
 
-footer div ul li a:hover{
+footer a:hover{
     color:#a5a5a5;
 }
 
@@ -939,7 +1039,7 @@ footer div ul li a:hover{
 
     /* HOME */
     header{
-        height: 12vh;
+        height: 110px;
         padding: 0 7%;
     }
 
@@ -1017,12 +1117,12 @@ footer div ul li a:hover{
         justify-content: center;
         flex-direction: column;
     }
+
     #nav-mobile ul li{
         margin: 10px 0;
     }
 
     #nav-mobile ul li .active{
-        
         border-bottom: 2px solid #fff;
     }
 
@@ -1033,7 +1133,7 @@ footer div ul li a:hover{
 
     #background{
         width: 100%;
-        margin-top: 12vh;
+        margin-top: 110px;
     }
 
     #logo-section div #paragrafo h3{
@@ -1052,6 +1152,10 @@ footer div ul li a:hover{
         font-size: 1.5rem;
     }
 
+    #accesso-fotogallery{
+        margin: 2vh auto;
+    }
+
     .container-div-gallery{
         column-gap: 30px;
     }
@@ -1066,6 +1170,7 @@ footer div ul li a:hover{
 
     #history{
         flex-direction: column;
+        margin-top: 100px;
     }
 
     #history div{
@@ -1125,27 +1230,39 @@ footer div ul li a:hover{
         height: 100%;
     }
 
-    #buttons_prodotti{
-        margin-top: 15vh;
+    #section_prodotti{
+        margin-top: 150px;
+        flex-direction: column;
     }
 
-    #buttons_prodotti .btn{
-        font-size: .9rem;
-        padding: 15px 0;
+    .buttons_prodotti{
+        flex-direction: row;
+        width: 100%;
+        height: auto;
     }
 
-    .info_prodotti{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .buttons_prodotti .btn{
+        font-size: 1rem;
+
+        &:hover{
+            transform: translate(0, -5px);
+        }
     }
 
-    .info_prodotti h2{
-        margin: 0;
+    .container_prodotti{
+        width: 100%;
+        height: 100%;
+        margin-top: 30px;
     }
 
-    .info_prodotti p{
-        display: none;
+    .container_prodotti .content .pr{
+        opacity: 0.9;
+        width: 80%;
+    }
+
+    .container_prodotti .button_pdf{
+        background-color: #fff;
+        color: #333030;
     }
 
     /* CONTATTI RESPONSIVE TABLET */
@@ -1192,13 +1309,18 @@ footer div ul li a:hover{
         width: 90%;
     }
 
+    /* FOTOGALLERY RESPONSIVE TABLET */
+    #sections-fotogallery{
+        margin-top: 110px;
+    }
+
 }
 
 
 @media only screen and (max-width: 767px) {
     /* HOME RESPONSIVE TELEFONO */
     header{
-        height: 13vh;
+        height: 90px;
     }
 
     #logo{
@@ -1319,6 +1441,10 @@ footer div ul li a:hover{
     }
 
     /* AZIENDA RESPONSIVE TELEFONO */
+    #history{
+        margin-top: 90px;
+    }
+
     #impianto{
         margin-top: 5vh;
     }
@@ -1340,6 +1466,10 @@ footer div ul li a:hover{
         height: 25vh;
         margin: 15px auto;
     }
+    
+    #cantiere{
+        background-position: center;
+    }
 
     #cantiere p{
         width: 90%;
@@ -1355,23 +1485,32 @@ footer div ul li a:hover{
         margin-top: 2vh;
     }
 
-    #buttons_prodotti{
+    #section_prodotti{
+        width: 100%;
+        margin-top: 120px;
+        height: 800px;
+    }
+
+    .buttons_prodotti{
+        width: 100%;
         flex-direction: column;
+        align-items: center;
     }
 
-    #buttons_prodotti .btn{
-        width: 80%;
-        padding: 20px 0;
+    .buttons_prodotti .btn{
+        margin: 10px auto;
+        font-size: 1.5rem;
     }
 
-    #section-prodotti{
-        align-items: flex-start;
-        width: 80%;
+    .container_prodotti{
+        width: 100%;
     }
 
-    #section-prodotti h2{
-        font-size: 1.2rem;
+    .container_prodotti .content .pr p{
+        font-size: .8rem;
+        line-height: 20px;
     }
+
 
     /* CONTATTI RESPONSIVE TELEFONO */
     #text-info{
@@ -1389,7 +1528,7 @@ footer div ul li a:hover{
         row-gap: 20px;
     }
 
-    input{
+    input:not([type = "checkbox"]){
         width: 30vw;
     }
 
@@ -1397,11 +1536,41 @@ footer div ul li a:hover{
         width: 70vw;
     }
 
+    /* FOTOGALERY MOBILE */
+    #sections-fotogallery{
+        flex-direction: column;
+    }
 
-        
+    #sections-fotogallery .card-foto{
+        width: 100%;
+        height: 23vh;
+    }
 
     footer{
         flex-direction: column;
+    }
+
+    .info-aziendali{
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 30px;
+    }
+
+    .info-aziendali div{
+        width: 100%;
+    }
+
+    footer .info-aziendali div:last-child{
+        text-align: left;
+    }
+
+    footer .info-pagine{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    .info-pagine p{
+        text-align: center;
     }
 }
 

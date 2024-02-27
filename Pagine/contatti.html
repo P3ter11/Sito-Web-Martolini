@@ -7,6 +7,7 @@
     <title>Contatti</title>
 </head>
 <body>
+
     <header>
         <div id="logo">
             <a href="index.html"><img src="../Immagini/LOGO MARTOLINI 2023.svg" alt="logo Martolini"></a>
@@ -75,7 +76,7 @@
 
     <main id="main-info">
         <h2>Contattaci per informazioni</h2>
-        <form id ="form_contacts" onsubmit="submitForm()" method="post">
+        <form action="send-email.php" id="form_contacts" onsubmit="submitForm()">
             <label for="nome">Nome / Azienda:<br>
                 <input type="text" id="nome" required>
             </label>
@@ -108,7 +109,12 @@
                 <textarea name="textarea" id="textarea" required></textarea>
             </label>
 
-            <input type="submit" value="Invia">
+            <label for="checkbox" class="check_privacy">
+                <input type="checkbox" id="checkbox" required>
+                Accetto la <a href="../Download/Privacy Policy Martolini SRL.pdf">privacy policy</a> e le condizioni di utilizzo del sito web
+            </label>
+
+            <input type="submit" value="Invia" class="invio-dati">
 
         </form>
     </main>
@@ -141,13 +147,13 @@
             </div>
 
             <div>
-                <ul style = "text-align: right; ">
+                <ul">
                     <li><b>Sede legale:</b> Via F.Villani, 2 - 29600 Lodi (LO)</li>
                     <li><b>Cap. Soc:</b> €60.000,00</li>
                     <li><b>P.IVA e C.F:</b> 11963190159</li>
                     <li><b>R.E.A.</b> 82484</li>
                     <li><b>ISCR. REG. IMPR.</b> 1443075</li>
-                    <li><b>Sede operativa:</b> Via Piave 15 - 20087 Robecco sul Naviglio</li>
+                    <li><b>Sede operativa:</b><br>Via Piave 15 - 20087 Robecco sul Naviglio</li>
                     <li><b>Tel.</b> +39 029470534</li>
                 </ul>
             </div>
@@ -159,6 +165,8 @@
                 <li><a href="#">Prodotti</a></li>
                 <li><a href="contatti.html">Contatti</a></li>
             </ul>
+            <a href="../Download/Privacy Policy Martolini SRL.pdf" target="_blank">Privacy Policy</a>
+            <p>I contenuti e le immagini sono soggette a diritto d'autore ©</p>
         </div>
     </footer>
 
