@@ -418,7 +418,8 @@ header ul .this_page{
     width: 30%;
     height: 35vh;
     background-image: url('Immagini/catalogo.png');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 #produzione >*{
