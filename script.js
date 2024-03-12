@@ -43,7 +43,6 @@ function showGallery(element){
         break;
 
     }
-    gallery.innerHTML += "<a href = '#'><i class='fa-solid fa-arrow-up'></i></a>";
     
 }
 

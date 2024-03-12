@@ -85,8 +85,9 @@
         let urlParam = new URLSearchParams(window.location.search);
         let category = urlParam.get('gallery');
         console.log(category);
-
-        if (category === "azienda") {
+        
+        if(category !== null){
+            if (category === "azienda") {
             let images = document.getElementById('category-azienda');
             images.style.display = "grid";
         } else if (category === "produzione") {
@@ -100,6 +101,9 @@
             images.style.display = "grid";
         }
         document.getElementById('category-foto').scrollIntoView();
+        }
+
+        
     };
 
         
