@@ -19,9 +19,11 @@ function clicked(){
 function showGallery(element){
     let gallery = document.getElementById("category-foto");
     let target = document.querySelectorAll(".target");
-    for(let i = 0; i<target.length; i++){
+    for(let i = 0; i<target.length; i++)
         target[i].style.display="none";
-    }
+
+        console.log(element.innerText);
+    
     switch(element.innerText){
         case "Azienda":
             let immAzienda = document.getElementById("category-azienda");
