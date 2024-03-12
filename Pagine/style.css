@@ -253,7 +253,7 @@ header ul .this_page{
 #spedizioni_consegne::after{
     content: "";
     position: absolute;
-    background-image: url("../Immagini/camion1.png");
+    background-image: url("../Immagini (webp)/camion.webp");
     background-repeat: no-repeat;
     background-size: cover;
     width: 35%;
@@ -299,7 +299,8 @@ header ul .this_page{
 }
 
 .container-div-gallery div{
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -1549,6 +1550,7 @@ footer a:hover{
     /* FOTOGALERY MOBILE */
     #sections-fotogallery{
         flex-direction: column;
+        margin-top: 90px;
     }
 
     #sections-fotogallery .card-foto{
