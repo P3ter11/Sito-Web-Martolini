@@ -205,7 +205,7 @@ header ul .this_page{
 #ce::before{
     position: absolute;
     content: "";
-    background-image: url("../Immagini/ce.png");
+    background-image: url("Immagini/ce.png");
     background-repeat: no-repeat;
     width: 70px;
     height: 100px;
@@ -253,7 +253,7 @@ header ul .this_page{
 #spedizioni_consegne::after{
     content: "";
     position: absolute;
-    background-image: url("../Immagini (webp)/camion.webp");
+    background-image: url("Immagini (webp)/camion.webp");
     background-repeat: no-repeat;
     background-size: cover;
     width: 35%;
@@ -417,7 +417,7 @@ header ul .this_page{
     right: -100px;
     width: 30%;
     height: 35vh;
-    background-image: url('../Immagini/cataloghi.png');
+    background-image: url('Immagini/cataloghi.png');
     background-size: cover;
 }
 
@@ -441,7 +441,7 @@ header ul .this_page{
     position: relative;
     width: 100%;
     height: 50vh;
-    background-image: url("../Immagini/azienda2.jpg");
+    background-image: url("Immagini/azienda2.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: 100% 30%;
@@ -507,16 +507,16 @@ header ul .this_page{
 }
 
 #impianto .container div:nth-child(1){
-    background-image: url("../Immagini/macchinario.jpg");
+    background-image: url("Immagini/macchinario.jpg");
     background-position: center;
 }
 
 #impianto .container div:nth-child(2){
-    background-image: url("../Immagini/silos.jpg");
+    background-image: url("Immagini/silos.jpg");
 }
 
 #impianto .container div:nth-child(3){
-    background-image: url("../Immagini/Immagine\ 008.jpg");
+    background-image: url("Immagini/Immagine\ 008.jpg");
     background-position: right;
 }
 
@@ -609,13 +609,13 @@ header ul .this_page{
 }
 
 #evidenza .images .posa{
-    background-image:url("../Immagini/Splittato.jpeg");
+    background-image:url("Immagini/Splittato.jpeg");
     background-size: cover;
     background-position: center;
 }
 #evidenza div:nth-child(3){
     height: 100%;
-    background-image:url("../Immagini/bifaccia.jpeg");
+    background-image:url("Immagini/bifaccia.jpeg");
     background-size: cover;
     background-position: center;
 }
@@ -667,30 +667,30 @@ header ul .this_page{
 }
 
 #muratura {
-    background-image: url('../Categoria/costruzione.webp');
+    background-image: url('Categoria/costruzione.webp');
 }
 
 #recinzione{
-    background-image: url('../Categoria/recinzione.webp');
+    background-image: url('Categoria/recinzione.webp');
     background-position: top;
 }
 
 #anelli{
-    background-image: url('../Categoria/anelli-pozzetti.webp');
+    background-image: url('Categoria/anelli-pozzetti.webp');
 }
 
 #chiusini{
-    background-image: url('../Categoria/chiusini.webp');
+    background-image: url('Categoria/chiusini.webp');
     background-position: top;
 }
 
 #fognatura{
-    background-image: url('../Categoria/fognatura.webp');
+    background-image: url('Categoria/fognatura.webp');
     background-position: top;
 }
 
 #stradale{
-    background-image: url('../Categoria/stradale.webp');
+    background-image: url('Categoria/stradale.webp');
 }
 
 .content .pr{
@@ -884,20 +884,20 @@ label textarea{
 }
 
 #sections-fotogallery .card-foto:nth-child(1){
-    background-image: url('../Immagini/azienda.jpg'); 
+    background-image: url('Immagini/azienda.jpg'); 
 }
 
 #sections-fotogallery .card-foto:nth-child(2){
-    background-image: url('../Immagini/Immagine\ 008.jpg'); 
+    background-image: url('Immagini/Immagine\ 008.jpg'); 
 }
 
 #sections-fotogallery .card-foto:nth-child(3){
-    background-image: url('../Immagini/fotogallery2.JPG');
+    background-image: url('Immagini/fotogallery2.JPG');
     background-position: 50% 30%; 
 }
 
 #sections-fotogallery .card-foto:nth-child(4){
-    background-image: url('../Immagini/cataloghi-prodotti.JPG');
+    background-image: url('Immagini/cataloghi-prodotti.JPG');
 }
 .card-foto{
     overflow: hidden;
