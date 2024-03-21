@@ -76,7 +76,7 @@
 
     <main id="main-info">
         <h2>Contattaci per informazioni</h2>
-        <form method="post" action="send-email.php" id="form_contacts">
+        <form id="form_contacts">
             <label for="nome">Nome / Azienda:<br>
                 <input type="text" id="nome" required>
             </label>
@@ -98,7 +98,7 @@
             </label>
 
             <label for="email">E-mail:<br>
-                <input type="email" name="email" id="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" required>
+                <input type="email" name="email" id="client-email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" required>
             </label>
 
             <label for="oggetto">Oggetto:<br>
@@ -118,6 +118,36 @@
 
         </form>
     </main>
+
+    <script>
+        
+         document.getElementById('form_contacts').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Recupera i dati del form
+            let clientEmail = document.getElementById('client-email').value;
+            var subject = document.getElementById('oggetto').value;
+            var message = document.getElementById('textarea').value;
+            
+            // Configura l'oggetto di invio email
+            let email = {
+                to: "mattiapeter1101@gmail.com",
+                subject: subject,
+                body: message
+            };
+            
+            // Invia l'email utilizzando SMTP.js
+            Email.send(email)
+                .then(function(response) {
+                    console.log("Email inviata con successo:", response);
+                    alert("Email inviata con successo!");
+                })
+                .catch(function(error) {
+                    console.error("Errore durante l'invio dell'email:", error);
+                    alert("Si è verificato un errore durante l'invio dell'email.");
+                });
+        });
+    </script>
 
     <section id="dove-siamo">
         <div>

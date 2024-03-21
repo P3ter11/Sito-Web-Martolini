@@ -513,7 +513,8 @@ header ul .this_page{
 }
 
 #impianto .container div:nth-child(2){
-    background-image: url("Immagini/silos.png");
+    background-image: url("Immagini/pannelli\ fotovoltaici.PNG");
+    background-position: center;
 }
 
 #impianto .container div:nth-child(3){
@@ -864,6 +865,64 @@ label textarea{
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+/* PAGINA CATEGORIA */
+#categoria{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 100px auto
+}
+
+#categoria h1{
+    text-align: center;
+}
+
+#categoria .images{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px auto;
+}
+
+#categoria .images .box{
+    width: 25%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#categoria .images .box img{
+    width: 100%;
+    height: auto;
+}
+
+#categoria .images .box h3{
+    margin: 10px 0;
+}
+
+#categoria p{
+    width: 80%;
+    line-height: 30px;
+    margin: 30px auto;
+}
+
+#categoria a .btn-download{
+    padding: 15px;
+    background-color: #CF1622;
+    color: #fff;
+    margin-left: 10%;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover{
+        background-color: #8C131A;
+    }
 }
 /* PAGINA FOTOGALLERY */
 
