@@ -139,13 +139,25 @@ let contents = document.querySelectorAll( ".content" );
 
 buttons.forEach(button =>{
 button.addEventListener('mouseenter', () => {
+    getCategoryProduct(button);
+});
+
+button.addEventListener("click", () =>{
+    getCategoryProduct(button);
+})
+
+});
+
+function getCategoryProduct(button){
     let target = button.getAttribute('data-target');
     let targetId = document.getElementById(target);
 
     contents.forEach(content =>{
-        if (content !== targetId) 
+        if (content !== targetId) {
             content.classList.remove('cover');
             content.style.opacity = '0';
+        }
+            
     });
 
     /* targetId.style.opacity = '1'; */
@@ -154,6 +166,4 @@ button.addEventListener('mouseenter', () => {
     targetId.style.opacity = '1';
     /* targetId.style.display = 'flex'; */
 
-});
-
-});
+}
