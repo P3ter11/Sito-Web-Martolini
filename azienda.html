@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <title>Azienda</title>
 </head>
 <body>
@@ -103,15 +106,21 @@
         <p>Gli impianti di produzione sono <b>tecnologicamente avanzati.</b> <br>
             Negli ultimi dieci anni sono stati fatti importanti investimenti sui macchinari di ultima generazione.<br> 
             All’interno del nostro stabilimento abbiamo un <b>laboratorio</b> attrezzato 
-            per le prove di controllo sui prodotti freschi e sui prodotti che hanno raggiunto la maturazione.<br>
+            per le prove di controllo sui prodotti freschi e sui prodotti che hanno raggiunto la maturazione.<br><br>
             La nostra azienda si impegna attivamente nella lotta ai cambiamenti climatici e nella tutela dell'ambiente. 
             Utilizziamo esclusivamente <b>pannelli fotovoltaici</b> per alimentare i nostri macchinari, dimostrando così un forte 
             impegno verso la sostenibilità e la riduzione delle emissioni di CO2.
         </p>
         <div class="container">
-            <div></div>
-            <div></div>
-            <div></div>
+            <a data-fancybox = "gallery" href="Immagini/macchinario.jpg" style="width: 30%;">
+                <img src="Immagini/macchinario.jpg" alt="Immagine macchinario">
+            </a>
+            <a data-fancybox = "gallery" href="Immagini/pannelli fotovoltaici.PNG" style="width: 30%;">
+                <img src="Immagini/pannelli fotovoltaici.PNG" alt="Immagine pannelli fotovoltaici">
+            </a>
+            <a data-fancybox = "gallery" href="Immagini/Fotogallery/produzione 2.jpg" style="width: 30%;">
+                <img src="Immagini/Fotogallery/produzione 2.jpg" alt="Immagine produzione">
+            </a>
         </div>
 
         <p id = "fotogallery"><a href="fotogallery.html"><u>Fotogallery</u></a></p>

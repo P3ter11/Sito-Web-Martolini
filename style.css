@@ -501,26 +501,12 @@ header ul .this_page{
     padding: 5% 0;
 }
 
-#impianto .container div{
-    width: 30%;
-    height: 40vh;
-    background-size: cover;
+#impianto .container img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
-#impianto .container div:nth-child(1){
-    background-image: url("Immagini/macchinario.jpg");
-    background-position: center;
-}
-
-#impianto .container div:nth-child(2){
-    background-image: url("Immagini/pannelli\ fotovoltaici.PNG");
-    background-position: center;
-}
-
-#impianto .container div:nth-child(3){
-    background-image: url("Immagini/Immagine\ 008.jpg");
-    background-position: right;
-}
 
 #fotogallery a{
     color: #CF1622;
@@ -866,19 +852,42 @@ label textarea{
     justify-content: center;
     text-align: center;
 }
+
 /* PAGINA CATEGORIA */
 #categoria{
-    width: 90%;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 100px auto
+    margin: 70px auto
 }
 
-#categoria h1{
-    text-align: center;
+#categoria .background-category{
+    width: 100%;
+    height: 300px;
+    background-image: url('Immagini/azienda2.jpg');
+    background-size: cover;
+    background-position: 50% 20%;
+    position: relative;
+    background-attachment: fixed;
 }
+
+#categoria .background-category .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+}
+
+
 
 #categoria .images{
     width: 80%;
@@ -1032,6 +1041,7 @@ footer{
     height: auto;
     margin-top: 5vh;
     color: #fff;
+    position: relative;
 }
 
 footer .info-aziendali div:last-child{
@@ -1046,11 +1056,22 @@ footer .info-aziendali{
     display: flex;
     color: #ffffff;
     width: 100%;
+    height: auto;
     justify-content: space-between;
     margin: 0 auto;
     line-height: 25px;
     border-bottom: 1px solid #fff;
     padding: 20px;
+    
+}
+
+footer .white-logo{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: auto;
 }
 
 footer .info-aziendali div{
@@ -1385,6 +1406,10 @@ footer a:hover{
         margin-top: 110px;
     }
 
+    /* .white-logo{
+        display: none;
+    } */
+
 }
 
 
@@ -1644,6 +1669,17 @@ footer a:hover{
 
     .info-pagine p{
         text-align: center;
+    }
+
+    footer .white-logo{
+        position: relative;
+        display: block;
+        max-width: 250px;
+        margin-left: 30px;
+        top: 0;
+        left: 0;
+        padding: 20px 0;
+        transform: none;
     }
 }
 
